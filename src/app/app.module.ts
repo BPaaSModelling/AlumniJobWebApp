@@ -6,6 +6,16 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MdButtonModule, MdInputModule} from "@angular/material";
 import { AdminInsertJobOfferComponent } from './admin-insert-job-offer/admin-insert-job-offer.component';
+import {BackendService} from "./backend.service";
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes = [
+  {
+    path: 'admin/insert',
+    component: AdminInsertJobOfferComponent,
+  },
+];
+
 
 @NgModule({
   declarations: [
@@ -16,11 +26,12 @@ import { AdminInsertJobOfferComponent } from './admin-insert-job-offer/admin-ins
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(appRoutes, { useHash: false }),
     BrowserAnimationsModule,
     MdButtonModule,
     MdInputModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

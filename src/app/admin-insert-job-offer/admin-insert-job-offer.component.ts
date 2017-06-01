@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {JobOfferModel} from "../_model/joboffer.model";
+import {BackendService} from "../backend.service";
 
 @Component({
   selector: 'app-admin-insert-job-offer',
@@ -10,7 +11,9 @@ export class AdminInsertJobOfferComponent implements OnInit {
 
   private jobOfferModel:JobOfferModel;
 
-  constructor() {
+  constructor(
+    private backendService:BackendService
+  ) {
     this.jobOfferModel = new JobOfferModel();
   }
 
@@ -18,7 +21,7 @@ export class AdminInsertJobOfferComponent implements OnInit {
   }
 
   private submitForm():void{
-    console.log("this is the content " +JSON.stringify(this.jobOfferModel));
+    this.backendService.addJobOffer(this.jobOfferModel);
 
   }
 

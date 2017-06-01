@@ -9,8 +9,14 @@
            name="jobOfferName"
            placeholder="job offer name" value="">
   </md-input-container>
+  <md-input-container>
+    <input mdInput [(ngModel)]="jobOfferModel.jobType"
+           name="jobType"
+           placeholder="job type name" value="">
+  </md-input-container>
   <br />
   this is the content: {{jobOfferModel.jobOfferName}}
+  this is the content: {{jobOfferModel.jobType}}
   <br />
   <button md-button (click)="submitForm()">Submit</button>
 </form>
