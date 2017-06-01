@@ -1,0 +1,16 @@
+<p>
+  admin-insert-job-offer works!
+</p>
+
+
+<form>
+  <md-input-container>
+    <input mdInput [(ngModel)]="jobOfferModel.jobOfferName"
+           name="jobOfferName"
+           placeholder="job offer name" value="">
+  </md-input-container>
+  <br />
+  this is the content: {{jobOfferModel.jobOfferName}}
+  <br />
+  <button md-button (click)="submitForm()">Submit</button>
+</form>
