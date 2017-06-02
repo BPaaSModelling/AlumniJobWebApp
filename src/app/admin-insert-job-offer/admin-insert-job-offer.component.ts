@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, OnChanges, AfterViewInit} from '@angular/core';
 import {JobOfferModel} from "../_model/joboffer.model";
 import {BackendService} from "../backend.service";
 
@@ -20,8 +20,10 @@ export class AdminInsertJobOfferComponent implements OnInit {
   ngOnInit() {
   }
 
+
   private submitForm():void{
     this.backendService.addJobOffer(this.jobOfferModel);
+
 
   }
 

@@ -8,11 +8,16 @@ import {MdButtonModule, MdInputModule} from "@angular/material";
 import { AdminInsertJobOfferComponent } from './admin-insert-job-offer/admin-insert-job-offer.component';
 import {BackendService} from "./backend.service";
 import {RouterModule, Routes} from "@angular/router";
+import { AdminListJobOffersComponent } from './admin-list-job-offers/admin-list-job-offers.component';
 
 const appRoutes: Routes = [
   {
     path: 'admin/insert',
     component: AdminInsertJobOfferComponent,
+  },
+  {
+    path: 'admin/list',
+    component: AdminListJobOffersComponent,
   },
 ];
 
@@ -20,7 +25,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AdminInsertJobOfferComponent
+    AdminInsertJobOfferComponent,
+    AdminListJobOffersComponent
   ],
   imports: [
     BrowserModule,

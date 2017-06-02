@@ -1,0 +1,5 @@
+
+these are the job offers:
+<ul>
+  <li *ngFor="let offer of (backendService.jobOffers$ | async)">{{offer.jobOfferName}} - {{offer.jobOfferURI}}</li>
+</ul>
