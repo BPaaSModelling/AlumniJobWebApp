@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminListJobOffersComponent } from './admin-list-job-offers.component';
+import { MultiselectInsertComponent } from './multiselect-insert.component';
 
-describe('AdminListJobOffersComponent', () => {
-  let component: AdminListJobOffersComponent;
-  let fixture: ComponentFixture<AdminListJobOffersComponent>;
+describe('MultiselectInsertComponent', () => {
+  let component: MultiselectInsertComponent;
+  let fixture: ComponentFixture<MultiselectInsertComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminListJobOffersComponent ]
+      declarations: [ MultiselectInsertComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminListJobOffersComponent);
+    fixture = TestBed.createComponent(MultiselectInsertComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

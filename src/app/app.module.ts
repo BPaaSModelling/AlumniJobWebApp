@@ -1,32 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {HttpModule, JsonpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MdButtonModule, MdInputModule} from "@angular/material";
-import { AdminInsertJobOfferComponent } from './admin-insert-job-offer/admin-insert-job-offer.component';
-import {BackendService} from "./backend.service";
+import {MdButtonModule, MdInputModule, MdRadioModule} from "@angular/material";
 import {RouterModule, Routes} from "@angular/router";
-import { AdminListJobOffersComponent } from './admin-list-job-offers/admin-list-job-offers.component';
+import {InsertJOService} from "./admin-insert-joboffer.service";
+import {AdminInsertJobofferComponent} from "./admin-insert-joboffer/admin-insert-joboffer.component";
+import {ValueInsertComponent} from "./insert-types/value-insert/value-insert.component";
+import {SingleselectInsertComponent} from "./insert-types/singleselect-insert/singleselect-insert.component";
+import {MultiselectInsertComponent} from "./insert-types/multiselect-insert/multiselect-insert.component";
+import {SearchInsertComponent} from "./insert-types/search-insert/search-insert.component";
 
 const appRoutes: Routes = [
   {
-    path: 'admin/insert',
-    component: AdminInsertJobOfferComponent,
+    path: 'admin/insertJobOffer',
+    component: AdminInsertJobofferComponent,
   },
-  {
-    path: 'admin/list',
-    component: AdminListJobOffersComponent,
-  },
+
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminInsertJobOfferComponent,
-    AdminListJobOffersComponent
+    AdminInsertJobofferComponent,
+    SearchInsertComponent,
+    MultiselectInsertComponent,
+    SingleselectInsertComponent,
+    ValueInsertComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +38,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { useHash: false }),
     BrowserAnimationsModule,
     MdButtonModule,
-    MdInputModule
+    MdInputModule,
+    MdRadioModule,
+    JsonpModule,
   ],
-  providers: [BackendService],
+  providers: [InsertJOService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
