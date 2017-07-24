@@ -3,7 +3,7 @@ import {JobOfferModel} from "./_model/JobOffer.model";
 import {JobOfferElementModel} from "./_model/JobOfferElement.model";
 import {Observable} from "rxjs/Rx";
 import {SearchResultModel} from "./_model/SearchResult.model";
-import {Http, Jsonp, RequestOptions, Headers} from "@angular/http";
+import {Http, Jsonp, RequestOptions, Headers, URLSearchParams} from "@angular/http";
 import {VariableSettings} from "./_settings/variable.settings";
 import {EndpointSettings} from "./_settings/endpoint.settings";
 

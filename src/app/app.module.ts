@@ -4,7 +4,10 @@ import { FormsModule } from '@angular/forms';
 import {HttpModule, JsonpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MdButtonModule, MdInputModule, MdRadioModule} from "@angular/material";
+import {
+  MdButtonModule, MdCardModule, MdCheckboxModule, MdInputModule, MdListModule,
+  MdRadioModule
+} from "@angular/material";
 import {RouterModule, Routes} from "@angular/router";
 import {InsertJOService} from "./admin-insert-joboffer.service";
 import {AdminInsertJobofferComponent} from "./admin-insert-joboffer/admin-insert-joboffer.component";
@@ -41,6 +44,9 @@ const appRoutes: Routes = [
     MdInputModule,
     MdRadioModule,
     JsonpModule,
+    MdListModule,
+    MdCheckboxModule,
+    MdCardModule,
   ],
   providers: [InsertJOService],
   bootstrap: [AppComponent]
