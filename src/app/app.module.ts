@@ -5,8 +5,8 @@ import {HttpModule, JsonpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
-  MdButtonModule, MdCardModule, MdCheckboxModule, MdInputModule, MdListModule,
-  MdRadioModule
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatInputModule, MatListModule,
+  MatRadioModule
 } from "@angular/material";
 import {RouterModule, Routes} from "@angular/router";
 import {InsertJOService} from "./admin-insert-joboffer.service";
@@ -40,13 +40,13 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: false }),
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdInputModule,
-    MdRadioModule,
+    MatButtonModule,
+    MatInputModule,
+    MatRadioModule,
     JsonpModule,
-    MdListModule,
-    MdCheckboxModule,
-    MdCardModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatCardModule,
   ],
   providers: [InsertJOService],
   bootstrap: [AppComponent]

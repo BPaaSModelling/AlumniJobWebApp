@@ -1,22 +1,22 @@
-<md-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen>
   <h2>Insert a new Cloud Service</h2>
   <br />
 
 
-  <md-card-header>
+  <mat-card-header>
 
-    <md-list>
+    <mat-list>
       <!-- Here i insert a static field (the name of the job offer) -->
-      <md-card-content>
-        <md-list>
+      <mat-card-content>
+        <mat-list>
           <ul>
-            <md-list-item><b><li>Name of the new Job Offer:</li></b></md-list-item>
-            <md-input-container>
-              <input mdInput placeholder="Insert the name of the Job Offer" value="" [(ngModel)]="joLabel" required>
-            </md-input-container>
+            <mat-list-item><b><li>Name of the new Job Offer:</li></b></mat-list-item>
+            <mat-input-container>
+              <input matInput placeholder="Insert the name of the Job Offer" value="" [(ngModel)]="joLabel" required>
+            </mat-input-container>
           </ul>
-        </md-list>
-      </md-card-content>
+        </mat-list>
+      </mat-card-content>
 
       <!-- Here I iterate all the elements and i print out the ones with "General" domain -->
       <div *ngFor="let element of (insertService.joField$ | async); let i = index" [attr.data-index]="i">
@@ -24,7 +24,7 @@
         <ul>
 
 
-          <md-list-item><b><li>{{element.propertyLabel}}</li></b> </md-list-item>
+          <mat-list-item><b><li>{{element.propertyLabel}}</li></b> </mat-list-item>
 
             <app-search-insert *ngIf="element.typeOfAnswer == insertService.variables.getSearchURI()" [i]="i" [insertService]="insertService" [propertyLabel]="element.propertyLabel"></app-search-insert>
 
@@ -37,8 +37,8 @@
 
         </ul>
       </div><!-- End elements iteration) -->
-    </md-list>
-  </md-card-header>
+    </mat-list>
+  </mat-card-header>
 
 
   <hr />
@@ -51,8 +51,8 @@
 
   <br />
   <br />
-  <md-card-actions>
-    <div align="center"><button md-raised-button (click)="createJO()">Create new Job Offer</button></div>
-  </md-card-actions>
+  <mat-card-actions>
+    <div align="center"><button mat-raised-button (click)="createJO()">Create new Job Offer</button></div>
+  </mat-card-actions>
   <br />
-</md-sidenav-container>
+</mat-sidenav-container>
